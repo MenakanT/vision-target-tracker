@@ -6,7 +6,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 # Video is located inside the 'assets' folder
-video_path = str(PROJECT_ROOT / "assets" / "desk_video2.mov")
+video_path = str(PROJECT_ROOT / "assets" / "desk_video.mov")
 
 # Output directory: places extracted frames inside data/raw inside the project
 output_dir = str(PROJECT_ROOT / "data" / "raw")

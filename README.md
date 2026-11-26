@@ -41,15 +41,15 @@ ROBOFLOW_API_KEY=your_key_here
 
 ## Usage
 
-**Track objects in a video.** Put the input video at `assets/trial_video.mov`, then run:
+**Track objects in a video.** The sample clip `assets/trial_video.mov` is the default input. To use your own, replace that file, then run:
 
 ```bash
 python main.py
 ```
 
-The annotated video is saved to `assets/output_tracked.mp4`, and progress is printed every 10 frames.
+The annotated video is saved to `assets/output_tracked.mp4` (a finished example is already there), and progress is printed every 10 frames.
 
-**Extract frames for labelling.** Put the source video at `assets/desk_video2.mov`, then run:
+**Extract frames for labelling.** The script reads `assets/desk_video.mov`, the footage used to build the training set. Run:
 
 ```bash
 python scripts/extract_frames.py
@@ -62,7 +62,10 @@ The frames are saved to `data/raw/` as `frame_000.jpg`, `frame_001.jpg` and so o
 ```text
 vision-target-tracker/
 ├── assets/
-│   └── demo.gif             # Demo clip used in this README
+│   ├── demo.gif             # Demo clip used in this README
+│   ├── desk_video.mov       # Footage the training frames were sampled from
+│   ├── trial_video.mov      # Sample input for main.py
+│   └── output_tracked.mp4   # Annotated output from main.py
 ├── scripts/
 │   └── extract_frames.py    # Samples frames from a video for labelling
 ├── main.py                  # Inference, centroid extraction and video overlay
